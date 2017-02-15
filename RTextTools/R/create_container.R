@@ -5,7 +5,7 @@ create_container <- function(matrix,labels,trainSize=NULL,testSize=NULL,virgin) 
 
 	totalSize <- sort(unique(append(trainSize,testSize)))
 	column_names <- colnames(matrix)
-	data_matrix <- as.compressed.matrix(matrix[totalSize])
+	data_matrix <- as.compressed.matrix(matrix[totalSize,])
 	
 	matrix_train_predict <- data_matrix[trainSize,]
 	matrix_test_predict <- data_matrix[testSize,]
